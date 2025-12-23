@@ -1,0 +1,19 @@
+class Solution {
+    int countWays(int n) {
+        // your code here
+        if(n==1 || n==2){
+            return n;
+        }
+        int a=1;
+        int b=2;
+        int c=3;
+        for(int i=3;i<=n;i++){
+            c=b+a;
+            int temp=b;
+            b=c;
+            a=temp;
+        }
+        return c;
+        
+    }
+}
